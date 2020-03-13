@@ -1,7 +1,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  height: 22%;
+  // height: 22%; 
   // background-color: purple;
   // visibility: hidden;
 
@@ -11,14 +11,17 @@
     border-bottom: 2px solid gray;
     
     .section-icon {
-      
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
     }
     .section-title {
+      padding-left: 0.5rem;
       text-transform: uppercase;
     }
   }
 
   .section-body {
-
+    padding: 1rem;
   }
 }

@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: white;
   width: 21cm;
+  max-height: 29.7cm;
   height: 29.7cm;
   margin: 50px;
   border: 1px solid darkgray;
@@ -21,14 +22,17 @@
       border-right: 1px solid gray; 
       padding-right: 1.5rem;
 
-      .about-me {
+      .phone {
         display: flex;
+        .phone-icon{
+          margin-right: 5px;
+        }
       }
-      .contact {
+      .email {
         display: flex;
-      }
-      .social {
-        display: flex;
+        .email-icon{
+          margin-right: 5px;
+        }
       }
       
     }
@@ -38,19 +42,31 @@
       padding-left: 1.5rem;
       flex-grow: 1;
 
-      .experiences {
-        display: flex;
-      }
-      .skills {
-        display: flex;
-      }
-      .education {
-        display: flex;
-      }
-      .interests {
-        display: flex;
-      }
+      // .experiences {
+      //   display: flex;
+      // }
+      // .skills {
+      //   display: flex;
+      // }
+      // .education {
+      //   display: flex;
+      // }
+      // .interests {
+      //   display: flex;
+      // }
 
     }
+  }
+}
+
+@media print {
+  @page { margin: 0; }
+  .paper-sheet {
+      margin: 0px;
+      border: 0px;
+      padding: 1.5rem;
+      overflow: hidden;
+      max-height: 28.7cm;
+      height: 28.7cm;
   }
 }
