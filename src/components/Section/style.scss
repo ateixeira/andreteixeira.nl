@@ -1,0 +1,24 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 22%;
+  // background-color: purple;
+  // visibility: hidden;
+
+  .section-header {
+    display: flex;
+    font-size: 1.5rem;
+    border-bottom: 2px solid gray;
+    
+    .section-icon {
+      
+    }
+    .section-title {
+      text-transform: uppercase;
+    }
+  }
+
+  .section-body {
+
+  }
+}

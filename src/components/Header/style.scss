@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  min-height: 7%;
+  border-bottom: 1px solid gray;
+  padding: 15px;
+
+  .picture{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    img {
+      max-width: 60%;
+      transform-style: preserve-3d;
+      border-radius: 50%;
+      border: 2px solid gray;
+    }
+  }
+
+  .name_headline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    .name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+    }
+
+    .headline {
+      font-size: 1.5rem;
+    }
+  }
+}
