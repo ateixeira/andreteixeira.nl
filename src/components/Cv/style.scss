@@ -60,13 +60,17 @@
 }
 
 @media print {
-  @page { margin: 0; }
+  @page { margin: 0; padding: 0; overflow: hidden;}
+  .app {
+    position: fixed;
+    font-size: 1rem;
+  }
   .paper-sheet {
-      margin: 0px;
-      border: 0px;
-      padding: 1.5rem;
-      overflow: hidden;
-      max-height: 28.7cm;
-      height: 28.7cm;
+    margin: 0px;
+    border: 0px;
+    padding: 1.5rem;
+    overflow: hidden;
+    max-height: 28.7cm;
+    height: 28.7cm;
   }
 }
