@@ -1,13 +1,14 @@
 import * as React from "react";
 import { Header } from "../Header";
-import { Section } from "../Section";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Section, SmallSectionContent, LargeSectionContent } from "../Section";
+import {
+  faGithubAlt,
+  faLinkedin,
+  faStackOverflow
+} from "@fortawesome/free-brands-svg-icons";
 import "./style.scss";
 
-interface IProps {
-
-}
-const Cv: React.FC<IProps> = (IProps) => {
+const Cv: React.FC<{}> = (props) => {
   return (
     <div className="paper-sheet">
       <Header />
@@ -25,30 +26,42 @@ const Cv: React.FC<IProps> = (IProps) => {
             I use Es6/7/next and TypeScript.
           </Section>
           <Section icon="address-card" title="contact">
-            <div className="phone">
-              <div className="phone-icon">
-                <FontAwesomeIcon icon="phone" />
-              </div>
-              <div className="phone-content">
-                +31 0620316232
-              </div>
-            </div>
-            <div className="email">
-              <div className="email-icon">
-                <FontAwesomeIcon icon="envelope" />
-              </div>
-              <div className="email-content">
-                andre.teixeira@gmail.com
-              </div>
-            </div>
+            <SmallSectionContent element="phone" value="+31 0620316232" />
+            <SmallSectionContent element="envelope" value="andre.teixeira@gmail.com" />
+            <SmallSectionContent element="map-marker-alt" value="Utrecht, NL" />
           </Section>
           <Section icon="user-plus" title="social">
-            social content
+            <SmallSectionContent element={faGithubAlt} value="github.com/ateixeira" />
+            <SmallSectionContent element={faLinkedin} value="linkedin.com/in/andret/" />
+            <SmallSectionContent element={faStackOverflow} value="stackoverflow.com/users/955183" />
           </Section>
         </div>
         <div className="right-column">
           <Section icon="code-branch" title="experiences">
-            experiences content
+            <LargeSectionContent 
+              place="LINKIT"
+              title="JavaScript Developer"
+              period={[new Date(('2019-06-11')), new Date(('2019-06-11'))]}
+              tags={["JavaScript", "NodeJS", "ReactJS"]}
+              value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+              icon="plus" 
+            />
+            <LargeSectionContent 
+              place="ABB"
+              title="JavaScript Developer"
+              period={[new Date(('2019-06-11')), new Date(('2019-06-11'))]}
+              tags={["JavaScript", "NodeJS", "ReactJS"]}
+              value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+              icon="plus" 
+            />
+            <LargeSectionContent 
+              place="BookSpot"
+              title="JavaScript Developer"
+              period={[new Date(('2019-06-11')), new Date(('2019-06-11'))]}
+              tags={["JavaScript", "NodeJS", "ReactJS"]}
+              value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+              icon="plus" 
+            />
           </Section>
           <Section icon="hammer" title="skills">
             skills content

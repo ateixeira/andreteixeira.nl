@@ -8,7 +8,8 @@
   .section-header {
     display: flex;
     font-size: 1.5rem;
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
+    padding-top: 1rem;
     
     .section-icon {
       display: flex;
@@ -21,7 +22,56 @@
     }
   }
 
-  .section-body {
-    padding: 1rem;
+  .small-section-item {
+    display: flex;
+    padding-top: 1rem;
+    .small-section-item-icon{
+      margin-right: 5px;
+    }
+  }
+  
+  .large-section-item {
+    display: flex;
+    
+    padding-bottom: 1rem;
+    .large-section-item-icon{
+      margin-right: 5px;
+      font-style: italic;
+      color: grey;
+    }
+    .large-section-item-content{
+      display: flex;
+      flex-direction: column;
+      padding-top: 3px;
+
+      .large-section-item-wrapper {
+        display: flex;
+        justify-content: space-between;
+        font-style: italic;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: grey;
+      }
+
+      .large-section-item-place {
+        padding-left: 2px;
+      }
+
+      .large-section-item-value {
+        text-align: justify;
+        font-size: 0.9rem;
+        padding: 3px 0;
+      }
+
+      .large-section-item-title {
+        font-size: 1.2rem;
+      }
+
+      .large-section-item-tags {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: grey;
+      }
+    }
   }
 }

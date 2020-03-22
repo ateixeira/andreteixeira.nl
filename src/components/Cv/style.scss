@@ -14,7 +14,6 @@
     flex-grow: 1;
     margin-top: 2rem;
     
-    
     .left-column {
       display: flex;
       flex-direction: column;
@@ -22,38 +21,20 @@
       border-right: 1px solid gray; 
       padding-right: 1.5rem;
 
-      .phone {
-        display: flex;
-        .phone-icon{
-          margin-right: 5px;
-        }
+      .section-body {
+        padding: 1rem;
       }
-      .email {
-        display: flex;
-        .email-icon{
-          margin-right: 5px;
-        }
-      }
-      
+
     }
     .right-column {
       display: flex;
       flex-direction: column;
       padding-left: 1.5rem;
       flex-grow: 1;
-
-      // .experiences {
-      //   display: flex;
-      // }
-      // .skills {
-      //   display: flex;
-      // }
-      // .education {
-      //   display: flex;
-      // }
-      // .interests {
-      //   display: flex;
-      // }
+      
+      .section-body {
+        padding: 1rem 1rem 0 0;
+      }
 
     }
   }
