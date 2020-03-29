@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./style.scss";
-import { useRef, useEffect, useLayoutEffect, useState } from "react";
+import { useRef, useLayoutEffect, useState } from "react";
+import { Scene } from ".";
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -16,21 +17,14 @@ function useWindowSize() {
 }
 
 const Game: React.FC<{}> = (props) => {
-  const canvasRef: React.RefObject<HTMLCanvasElement> = useRef(null);
+  const sceneWrapperRef: React.RefObject<HTMLDivElement> = useRef(null);
   const [width, height] = useWindowSize();
 
-  useEffect(() => {
-    // code to run on component mount
-    console.log("width ", width);
-    console.log("height ", height);
-    if (!!canvasRef.current) {
-      canvasRef.current.width = width;
-      canvasRef.current.height = height;
-    }
-  }, [width, height]);
 
   return (
-    <canvas ref={canvasRef}></canvas>
+    <div className='scene-wrapper' ref={sceneWrapperRef}>
+      <Scene width={width} height={height} />
+    </div>
   );
 };
 
