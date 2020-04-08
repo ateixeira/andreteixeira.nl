@@ -71,9 +71,9 @@ function reducer(state: State, action: Action): State {
       } else if(Controls.movement.down.includes(payload.keyCode)){
         return { ...state, movement: "DOWN", gameConfig: { ...gameConfig, position: [position[0], position[1] + 1] } };
       } else if(Controls.movement.right.includes(payload.keyCode)){
-        return { ...state, movement: "RIGHT", gameConfig: { ...gameConfig, rotation: rotation + 5 } };
+        return { ...state, movement: "RIGHT", gameConfig: { ...gameConfig, rotation: rotation + 1 } };
       } else if(Controls.movement.left.includes(payload.keyCode)){
-        return { ...state, movement: "LEFT", gameConfig: { ...gameConfig, rotation: rotation - 5 } };
+        return { ...state, movement: "LEFT", gameConfig: { ...gameConfig, rotation: rotation - 1 } };
       } else {
         return { ...state, movement: undefined };
       }
@@ -87,9 +87,11 @@ function reducer(state: State, action: Action): State {
 
 const Scene: React.FC<IProps> = (props) => {
 
+  const canvasRef: React.RefObject<HTMLCanvasElement> = useRef(null);
   const [state, dispatch] = useReducer(reducer, { movement: undefined, gameConfig: {position: [props.width/2 || 0, props.height/2 || 0], rotation: 0} });
-  const svgRef: React.RefObject<SVGSVGElement> = useRef(null);
-
+  /**
+   * 
+   */
   useEffect(() => {
     const onKeyDown = (e: Event) => dispatch({type: ActionTypes.KeyDown, payload: e});
     const onKeyUp = (e: Event) => dispatch({ type: ActionTypes.KeyUp, payload: e });
@@ -108,12 +110,40 @@ const Scene: React.FC<IProps> = (props) => {
     }
   }, []);
 
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, props.height, props.width);
+    draw();
+  });
+
+  const draw_spaceship = () => {
+    const ctx = canvasRef.current.getContext('2d');
+    ctx.beginPath();
+    ctx.translate(40, 80);
+    ctx.rotate(state.gameConfig.rotation);
+    ctx.translate(-40, -80);
+    // ctx.moveTo(props.height, props.width);
+    // ctx.bezierCurveTo(props.width * 0.33, props.height * 0.53, props.width * 0.71, props.height * 1.14);
+    // Draw left side of the spaceship
+    ctx.moveTo(20,100);
+    ctx.bezierCurveTo(19, 76, 14, 41, 40, 20);
+    // Draw right side of the spaceship
+    ctx.moveTo(60,100);
+    ctx.bezierCurveTo(61, 76, 66, 41, 40, 20);
+    // Draw bottom of the spaceship
+    ctx.moveTo(20, 100);
+    ctx.lineTo(60, 100);
+
+    ctx.stroke();
+  }
+
+  const draw = () => {
+    draw_spaceship();
+  }
+
   return (
-    <svg width={props.width} height={props.height} ref={svgRef} >
-      <g transform={`translate(${state.gameConfig.position[0]}, ${state.gameConfig.position[1]}) rotate(${state.gameConfig.rotation} ${SPACESHIP_WIDTH / 2} ${SPACESHIP_HEIGHT/2})`}>
-        <SpaceShip height={SPACESHIP_HEIGHT} width={SPACESHIP_WIDTH} rotation={state.gameConfig.rotation}/>
-      </g>
-    </svg>
+    <canvas width={props.width} height={props.height} ref={canvasRef}></canvas>
   );
 };
 
