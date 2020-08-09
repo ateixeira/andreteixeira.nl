@@ -1,4 +1,5 @@
 import * as React from "react";
+import foto from "../../assets/foto.jpg";
 import "./style.scss";
 
 interface IProps {
@@ -8,7 +9,7 @@ const Header: React.FC<IProps> = (IProps) => {
   return (
     <div className="header">
       <div className="picture">
-        <img src="https://www.linkit.nl/themes/default/assets/img/uploaded/Andre%20Texeira%201518080777.jpg" alt="André Teixeira"/>
+        <img src={foto} alt="André Teixeira"/>
       </div>
       <div className="name_headline">
         <div className="name">ANDRÉ TEIXEIRA</div>

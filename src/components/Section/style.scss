@@ -43,6 +43,7 @@
       display: flex;
       flex-direction: column;
       padding-top: 3px;
+      width: 100%;
 
       .large-section-item-wrapper {
         display: flex;
@@ -53,8 +54,12 @@
         color: grey;
       }
 
-      .large-section-item-place {
+      .large-section-item-company {
+        font-size: 1rem;
         padding-left: 2px;
+      }
+      .large-section-item-period {
+        font-size: 0.8rem;
       }
 
       .large-section-item-value {
@@ -72,6 +77,24 @@
         font-weight: bold;
         color: grey;
       }
+    }
+  }
+
+  .skills-section-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: pink;
+    .skills-section-item {
+      display: flex;
+      width: 50%;
+    }
+
+    .skills-section-item-icon {
+  
+    }
+
+    .skills-section-item-content {
+  
     }
   }
 }
