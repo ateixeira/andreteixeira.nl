@@ -83,10 +83,25 @@
   .skills-section-wrapper{
     display: flex;
     flex-wrap: wrap;
-    background-color: pink;
+    margin-left: 14px;
     .skills-section-item {
       display: flex;
+      align-items: baseline;
       width: 50%;
+      padding: 0.4rem 0;
+      .skills-section-bar {
+        display: flex;
+        width: 100%;
+        height: 0.6rem;
+        background-color: #dedede;
+        margin: 0 0.8rem;
+        border: 1px solid #a5a5a5;
+        .skills-section-bar-slot {
+          background-color: #7d84a9;
+          width: 20%;
+      
+        }
+      }
     }
 
     .skills-section-item-icon {
@@ -94,7 +109,16 @@
     }
 
     .skills-section-item-content {
-  
+      display: flex;
+      min-width: 6rem;
+      .skills-section-bar {
+        background-color: #cecece;
+      }
     }
+  }
+
+  .education-section-wrapper{
+    display: flex;
+    margin-left: 14px;
   }
 }
