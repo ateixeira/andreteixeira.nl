@@ -1,12 +1,12 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./style.scss";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import "./Sections.scss";
 
 interface IProps {
-  title: string,
-  icon: IconProp,
-  children?: React.ReactNode,
+  title: string;
+  icon: IconProp;
+  children?: React.ReactNode;
 }
 const Section: React.FC<IProps> = (props: IProps) => {
   return (

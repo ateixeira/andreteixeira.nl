@@ -1,7 +1,6 @@
 import * as React from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import "./style.scss";
-
+import "./Sections.scss";
 
 interface IProps {
   place: string;
@@ -12,8 +11,7 @@ interface IProps {
   icon: IconProp;
 }
 
-
-const LargeSectionContent: React.FC<IProps> = props => {
+const LargeSectionContent: React.FC<IProps> = (props) => {
   const monthNames = [
     "Jan",
     "Feb",

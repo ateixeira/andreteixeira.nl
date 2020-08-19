@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./style.scss";
+import "./Sections.scss";
 
 interface IProps {
   skill: string;
@@ -11,8 +11,8 @@ const renderScoreBar = (score: number): React.ReactNode => {
     <div className="skills-section-bar">
       {Array(score)
         .fill(undefined)
-        .map(() => (
-          <div className="skills-section-bar-slot" />
+        .map((_, index) => (
+          <div key={index} className="skills-section-bar-slot" />
         ))}
     </div>
   );
@@ -22,7 +22,7 @@ const SkillsSectionContent: React.FC<IProps> = (props) => {
   return (
     <div className="skills-section-item">
       <div className="skills-section-item-content">{props.skill}</div>
-      
+
       {renderScoreBar(props.score)}
     </div>
   );

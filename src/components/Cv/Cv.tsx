@@ -1,12 +1,15 @@
 import * as React from "react";
-import { Header } from "../Header";
-import { SkillsSectionContent, EducationSectionContent } from "../Section";
-import { Section, SmallSectionContent, LargeSectionContent } from "../Section";
+import Header from "./Header";
+import Section from "./Section";
+import SkillsSectionContent from "./SkillsSectionContent";
+import EducationSectionContent from "./EducationSectionContent";
+import SmallSectionContent from "./SmallSectionContent";
+import LargeSectionContent from "./LargeSectionContent";
 import {
   faGithubAlt,
   faLinkedin,
   faStackOverflow,
-  faAws
+  faAws,
 } from "@fortawesome/free-brands-svg-icons";
 import "./style.scss";
 

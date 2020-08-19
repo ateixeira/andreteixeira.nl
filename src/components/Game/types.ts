@@ -10,3 +10,5 @@ export interface ControlConfig {
   stopKey: number;
   pauseKey: number;
 }
+
+export type ValidMovements = 'UP' | 'DOWN' | 'RIGHT' | 'LEFT' | undefined;

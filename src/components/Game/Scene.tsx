@@ -1,13 +1,13 @@
 import * as React from "react";
-import { useEffect, useReducer, useRef } from 'react';
-import { ControlConfig } from './types';
+import { useEffect, useReducer, useRef, useCallback } from 'react';
+import { ControlConfig, ValidMovements } from './types';
 import SpaceShip from './SpaceShip';
+
+
 import "./style.scss";
 
 // Constants
 const FREQUENCY = 1000 / 60;
-const SPACESHIP_WIDTH = 156;
-const SPACESHIP_HEIGHT = 97.5;
 
 // Types
 interface IProps {
@@ -17,14 +17,14 @@ interface IProps {
 
 interface GameConfig {
   position: [number, number];
-  rotation: number;
+  rotation_speed: number;
 }
 
-type State =
-  | { movement: 'UP', gameConfig: GameConfig, time?: number }
-  | { movement: 'DOWN', gameConfig: GameConfig, time?: number }
-  | { movement: 'RIGHT', gameConfig: GameConfig, time?: number }
-  | { movement: 'LEFT', gameConfig: GameConfig, time?: number }
+interface State { 
+  movement: ValidMovements;
+  gameConfig: GameConfig;
+  time?: number;
+}
 
 enum ActionTypes {
   KeyUp,
@@ -56,24 +56,22 @@ const Controls: ControlConfig = {
 }
 
 function reducer(state: State, action: Action): State {
+  
   switch (action.type) {
     case ActionTypes.KeyUp:
       return { ...state, movement: undefined };
 
     case ActionTypes.KeyDown:
       const payload = action.payload as KeyboardEvent;
-      const { gameConfig } = state;
-      const { position } = gameConfig;
-      const { rotation } = gameConfig;
 
       if(Controls.movement.up.includes(payload.keyCode)){
-        return { ...state, movement:  "UP", gameConfig: {...gameConfig, position: [position[0], position[1] - 1]}};
+        return { ...state, movement:  "UP"};
       } else if(Controls.movement.down.includes(payload.keyCode)){
-        return { ...state, movement: "DOWN", gameConfig: { ...gameConfig, position: [position[0], position[1] + 1] } };
+        return { ...state, movement: "DOWN" };
       } else if(Controls.movement.right.includes(payload.keyCode)){
-        return { ...state, movement: "RIGHT", gameConfig: { ...gameConfig, rotation: rotation + 1 } };
+        return { ...state, movement: "RIGHT" };
       } else if(Controls.movement.left.includes(payload.keyCode)){
-        return { ...state, movement: "LEFT", gameConfig: { ...gameConfig, rotation: rotation - 1 } };
+        return { ...state, movement: "LEFT" };
       } else {
         return { ...state, movement: undefined };
       }
@@ -87,8 +85,31 @@ function reducer(state: State, action: Action): State {
 
 const Scene: React.FC<IProps> = (props) => {
 
+  const getInitialState = (): State => {
+    return {
+      movement: undefined,
+      gameConfig: {
+        position: [props.width / 2 || 0, props.height / 2 || 0],
+        rotation_speed: 0
+      }
+    }
+  }
+
   const canvasRef: React.RefObject<HTMLCanvasElement> = useRef(null);
-  const [state, dispatch] = useReducer(reducer, { movement: undefined, gameConfig: {position: [props.width/2 || 0, props.height/2 || 0], rotation: 0} });
+  const [state, dispatch] = useReducer(reducer, getInitialState());
+
+  const spaceship = new SpaceShip(props.width / 2, props.height / 2, 80, 160);
+
+  const draw = useCallback(
+    () => {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvasRef.current.height, canvasRef.current.width);
+
+      spaceship.draw(ctx, state);
+    },
+    [spaceship, state]
+  )
   /**
    * 
    */
@@ -96,15 +117,15 @@ const Scene: React.FC<IProps> = (props) => {
     const onKeyDown = (e: Event) => dispatch({type: ActionTypes.KeyDown, payload: e});
     const onKeyUp = (e: Event) => dispatch({ type: ActionTypes.KeyUp, payload: e });
 
-    // We want it to re-render no more than 60 fps.
-    const tick = () => dispatch({ type: ActionTypes.Tick })
-    const timerId = setInterval(tick, FREQUENCY)
+    // // We want it to re-render no more than 60 fps.
+    // const tick = () => dispatch({ type: ActionTypes.Tick })
+    // const timerId = setInterval(tick, FREQUENCY)
 
 
     const unregisterKeydown = registerListener("keydown", onKeyDown)
     const unregisterKeyup = registerListener("keyup", onKeyUp)
     return () => {
-      clearInterval(timerId);
+      // clearInterval(timerId);
       unregisterKeydown();
       unregisterKeyup();
     }
@@ -112,35 +133,18 @@ const Scene: React.FC<IProps> = (props) => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, props.height, props.width);
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.height, canvas.width);
+    
+    spaceship.move(state.movement);
+
+  }, [spaceship, state.movement]);
+
+  useEffect(() => {
     draw();
-  });
+  }, [draw, state.time]);
 
-  const draw_spaceship = () => {
-    const ctx = canvasRef.current.getContext('2d');
-    ctx.beginPath();
-    ctx.translate(40, 80);
-    ctx.rotate(state.gameConfig.rotation);
-    ctx.translate(-40, -80);
-    // ctx.moveTo(props.height, props.width);
-    // ctx.bezierCurveTo(props.width * 0.33, props.height * 0.53, props.width * 0.71, props.height * 1.14);
-    // Draw left side of the spaceship
-    ctx.moveTo(20,100);
-    ctx.bezierCurveTo(19, 76, 14, 41, 40, 20);
-    // Draw right side of the spaceship
-    ctx.moveTo(60,100);
-    ctx.bezierCurveTo(61, 76, 66, 41, 40, 20);
-    // Draw bottom of the spaceship
-    ctx.moveTo(20, 100);
-    ctx.lineTo(60, 100);
 
-    ctx.stroke();
-  }
-
-  const draw = () => {
-    draw_spaceship();
-  }
 
   return (
     <canvas width={props.width} height={props.height} ref={canvasRef}></canvas>
