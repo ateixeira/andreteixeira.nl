@@ -1,13 +1,12 @@
 .header {
   display: flex;
-  min-height: 7%;
   border-bottom: 2px solid gray;
   padding: 15px;
 
   .picture{
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 25%;
     img {
       max-width: 60%;
       transform-style: preserve-3d;

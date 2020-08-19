@@ -1,15 +1,14 @@
 import * as React from "react";
 import { Header } from "../Header";
-import { SkillsSectionContent } from "../Section";
+import { SkillsSectionContent, EducationSectionContent } from "../Section";
 import { Section, SmallSectionContent, LargeSectionContent } from "../Section";
 import {
   faGithubAlt,
   faLinkedin,
-  faStackOverflow
+  faStackOverflow,
+  faAws
 } from "@fortawesome/free-brands-svg-icons";
 import "./style.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 
 const Cv: React.FC<{}> = (props) => {
   return (
@@ -100,7 +99,15 @@ const Cv: React.FC<{}> = (props) => {
               title="JavaScript Developer - Frontend (via LINKIT)"
               period={[new Date("2018-04-01"), new Date("2019-10-01")]}
               tags={["React", "Webpack", "Babel", "SASS"]}
-              value="Working on the set-up and upgrade of the front-end of the transition ECI/BookSpot.<br/>The project consists of a loosely coupled ReactJS application to an Intershop backend, using a modern and up to date stack."
+              value="Worked on the set-up and upgrade of the frontend of the transition ECI/BookSpot.<br/>The project consisted of a loosely coupled ReactJS application to an INTERSHOP backend, using a modern and up to date stack."
+              icon="plus"
+            />
+            <LargeSectionContent
+              place="Urbanizo"
+              title="Co-Founder and CTO"
+              period={[new Date("2018-04-01"), new Date("2019-10-01")]}
+              tags={["React", "Webpack", "Babel", "SASS"]}
+              value="Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015."
               icon="plus"
             />
           </Section>
@@ -116,11 +123,32 @@ const Cv: React.FC<{}> = (props) => {
               <SkillsSectionContent skill="Python" score={4} />
             </div>
           </Section>
-          {/* <Section icon="graduation-cap" title="education and awards">
+          <Section icon="landmark" title="education and awards">
             <div className="education-section-wrapper">
-              <EducationSectionContent skill="TypeScript" score={5} />
+              <EducationSectionContent
+                icon="graduation-cap"
+                title="Bachelor of Computer Science"
+                description="at UniCEUB, Brasília, DF, Brazil"
+                date="2002 - 2007"
+              />
+              <EducationSectionContent
+                icon="trophy"
+                title="1st place at <i><b><a href='htpps://www.google.com' target='_blank' rel='noopener noreferrer' style='color: inherit;text-decoration:none'>Sua Idéia Vale 1 Milhão</a></b></i>"
+                description="The winning idea gave birth to <b>Urbanizo</b> "
+                date="2012"
+              />
+              <EducationSectionContent
+                icon={faAws}
+                title="AWS Certified Solutions Architect"
+                date="2018"
+              />
+              <EducationSectionContent
+                icon={faAws}
+                title="AWS Certified Developer"
+                date="2020"
+              />
             </div>
-          </Section> */}
+          </Section>
           {/* <Section icon="icons" title="interests">
             interests content
           </Section> */}

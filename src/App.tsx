@@ -2,12 +2,12 @@ import * as React from "react";
 import { Cv } from "./components/Cv";
 // import { Game } from "./components/Game";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faAws } from "@fortawesome/free-brands-svg-icons";
 import {
   faAddressCard,
   faAngleRight,
+  faAward,
   faBuilding,
-  faCertificate,
   faCodeBranch,
   faEnvelope,
   faGraduationCap,
@@ -18,24 +18,29 @@ import {
   faPlus,
   faUser,
   faUserPlus,
+  faTrophy,
+  faLandmark,
 } from "@fortawesome/free-solid-svg-icons";
 import './App.scss';
 
-library.add(faAngleRight);
-library.add(faUser);
 library.add(faAddressCard);
-library.add(faUserPlus);
+library.add(faAngleRight);
+library.add(faAward);
+library.add(faAws);
+library.add(faBuilding);
 library.add(faCodeBranch);
-library.add(faHammer);
-library.add(faGraduationCap);
-library.add(faIcons);
-library.add(faPhone);
 library.add(faEnvelope);
+library.add(faGraduationCap);
+library.add(faHammer);
+library.add(faIcons);
+library.add(faLandmark);
 library.add(faLinkedin);
 library.add(faMapMarkerAlt);
-library.add(faBuilding);
+library.add(faPhone);
 library.add(faPlus);
-library.add(faCertificate);
+library.add(faTrophy);
+library.add(faUser);
+library.add(faUserPlus);
 
 const App: React.FC<{}> = () => {
   return (
