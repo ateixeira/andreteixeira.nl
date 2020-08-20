@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Cv } from "./components/Cv";
 // import { Game } from "./components/Game";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin, faAws } from "@fortawesome/free-brands-svg-icons";
 import {
   faAddressCard,
@@ -21,12 +21,12 @@ import {
   faTrophy,
   faLandmark,
 } from "@fortawesome/free-solid-svg-icons";
-import './App.scss';
+import "./App.scss";
 
 library.add(faAddressCard);
 library.add(faAngleRight);
 library.add(faAward);
-library.add(faAws);
+library.add(faAws as IconDefinition);
 library.add(faBuilding);
 library.add(faCodeBranch);
 library.add(faEnvelope);
