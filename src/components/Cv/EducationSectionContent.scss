@@ -1,0 +1,28 @@
+.education-section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 14px;
+  .education-section-item {
+    display: flex;
+    margin-bottom: 0.7rem;
+    width: 50%;
+    .education-section-item-icon {
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      min-width: 1.5rem;
+      justify-content: center;
+      display: flex;
+    }
+    .education-section-item-date {
+      display: flex;
+      font-size: 0.8rem;
+    }
+    .education-section-item-title {
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
+    .education-section-item-description {
+      font-size: 0.8rem;
+    }
+  }
+}

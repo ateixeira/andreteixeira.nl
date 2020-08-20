@@ -10,7 +10,7 @@ const renderScoreBar = (score: number): React.ReactNode => {
   return (
     <div className="skills-section-bar">
       {Array(score)
-        .fill(undefined)
+        .fill(" ")
         .map((_, index) => (
           <div key={index} className="skills-section-bar-slot" />
         ))}
@@ -22,7 +22,6 @@ const SkillsSectionContent: React.FC<IProps> = (props) => {
   return (
     <div className="skills-section-item">
       <div className="skills-section-item-content">{props.skill}</div>
-
       {renderScoreBar(props.score)}
     </div>
   );

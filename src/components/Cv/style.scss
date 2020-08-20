@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: white;
   width: 21cm;
+  min-width: 21cm;
   max-height: 29.7cm;
   height: 29.7cm;
   margin: 50px;
@@ -13,45 +14,50 @@
     display: flex;
     flex-grow: 1;
     margin-top: 2rem;
-    
+
     .left-column {
       display: flex;
       flex-direction: column;
       width: 26%;
-      border-right: 1px solid gray; 
+      border-right: 1px solid gray;
       padding-right: 1.5rem;
 
       .section-body {
         padding: 1rem;
       }
-
     }
     .right-column {
       display: flex;
       flex-direction: column;
       padding-left: 1.5rem;
       flex-grow: 1;
-      
+
       .section-body {
         padding: 1rem 1rem 0 0;
       }
-
     }
   }
 }
 
 @media print {
-  @page { margin: 0; padding: 0; overflow: hidden;}
-  .app {
-    position: fixed;
-    font-size: 1rem;
+  @page {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
   .paper-sheet {
     margin: 0px;
     border: 0px;
     padding: 1.3rem;
     overflow: hidden;
+    width: 21cm;
+    min-width: 21cm;
     max-height: 28.7cm;
     height: 28.7cm;
+    .skills-section-bar {
+      display: block !important;
+      .skills-section-bar-slot {
+      }
+    }
   }
 }

@@ -116,8 +116,8 @@ const Cv: React.FC<{}> = (props) => {
           </Section>
           <Section icon="hammer" title="skills">
             <div className="skills-section-wrapper">
-              <SkillsSectionContent skill="TypeScript" score={5} />
-              <SkillsSectionContent skill="NodeJS" score={4} />
+              <SkillsSectionContent skill="TypeScript" score={4} />
+              <SkillsSectionContent skill="NodeJS" score={5} />
               <SkillsSectionContent skill="ReactJS" score={2} />
               <SkillsSectionContent skill="MongoDB" score={5} />
               <SkillsSectionContent skill="GraphQL" score={5} />
