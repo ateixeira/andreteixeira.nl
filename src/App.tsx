@@ -34,7 +34,7 @@ library.add(faGraduationCap);
 library.add(faHammer);
 library.add(faIcons);
 library.add(faLandmark);
-library.add(faLinkedin);
+library.add(faLinkedin as IconDefinition);
 library.add(faMapMarkerAlt);
 library.add(faPhone);
 library.add(faPlus);
