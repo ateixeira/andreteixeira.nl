@@ -18,7 +18,7 @@ const renderScoreBar = (score: number): React.ReactNode => {
   );
 };
 
-const SkillsSectionContent: React.FC<IProps> = (props) => {
+const Skill: React.FC<IProps> = (props) => {
   return (
     <div className="skills-section-item">
       <div className="skills-section-item-content">{props.skill}</div>
@@ -27,4 +27,4 @@ const SkillsSectionContent: React.FC<IProps> = (props) => {
   );
 };
 
-export default SkillsSectionContent;
+export default Skill;

@@ -2,19 +2,26 @@ import * as React from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import "./Sections.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faMapMarker } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faMapMarker,
+  faUser,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface IProps {
   company: string;
   place: string;
   title: string;
+  contact?: string;
+  phone?: string;
   period: [Date, Date?];
   tags: string[];
   value: string;
   icon: IconProp;
 }
 
-const LargeSectionContent: React.FC<IProps> = (props) => {
+const Experience: React.FC<IProps> = (props) => {
   const monthNames = [
     "Jan",
     "Feb",
@@ -46,10 +53,14 @@ const LargeSectionContent: React.FC<IProps> = (props) => {
           </div>
         </div>
         <div className="large-section-item-details">
-          <FontAwesomeIcon icon={faHome} />
-          &nbsp;{props.company}&nbsp;
-          <FontAwesomeIcon icon={faMapMarker} />
-          &nbsp;{props.place}&nbsp;
+          {props.company && <FontAwesomeIcon icon={faHome} />}
+          &nbsp;{props.company}&nbsp;&nbsp;
+          {props.place && <FontAwesomeIcon icon={faMapMarker} />}
+          &nbsp;{props.place}&nbsp;&nbsp;
+          {props.contact && <FontAwesomeIcon icon={faUser} />}
+          &nbsp;{props.contact}&nbsp;&nbsp;
+          {props.phone && <FontAwesomeIcon icon={faPhone} />}
+          &nbsp;{props.phone}&nbsp;&nbsp;
         </div>
         <div
           className="large-section-item-value"
@@ -63,4 +74,4 @@ const LargeSectionContent: React.FC<IProps> = (props) => {
   );
 };
 
-export default LargeSectionContent;
+export default Experience;

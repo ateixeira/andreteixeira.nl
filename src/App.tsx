@@ -22,7 +22,6 @@ import {
   faPhone,
   faPlus,
   faUser,
-  faUserPlus,
   faTrophy,
   faLandmark,
   faHome,
@@ -32,6 +31,7 @@ import "./App.scss";
 
 library.add(faHome);
 library.add(faMapMarker);
+library.add(faUser);
 library.add(faAddressCard);
 library.add(faAngleRight);
 library.add(faAward);
@@ -51,7 +51,6 @@ library.add(faPhone);
 library.add(faPlus);
 library.add(faTrophy);
 library.add(faUser);
-library.add(faUserPlus);
 
 const App: React.FC<{}> = () => {
   return (

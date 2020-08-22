@@ -10,7 +10,7 @@ interface IProps {
   description?: string;
 }
 
-const EducationSectionContent: React.FC<IProps> = (props) => {
+const Education: React.FC<IProps> = (props) => {
   return (
     <div className="education-section-item">
       <div className="education-section-item-icon">
@@ -31,4 +31,4 @@ const EducationSectionContent: React.FC<IProps> = (props) => {
   );
 };
 
-export default EducationSectionContent;
+export default Education;
