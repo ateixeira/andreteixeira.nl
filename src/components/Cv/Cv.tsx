@@ -20,18 +20,19 @@ const Cv: React.FC<{}> = (props) => {
       <div className="content">
         <div className="left-column">
           <Section icon="user" title="about-me">
-            I’m a Software Developer with 9+ years of experience. I’ve been
-            working on projects of different sizes, using diverse languages and
-            platforms.
-            <p />
-            In the past 5 years I have been focusing mainly on JavaScript
-            coding, using mostly ES6+/next and TypeScript.
-            <p />
-            In the last 2 years, I have put more focus on backend and cloud
-            technologies, my daily tasks involves the maintenance of NodeJS
-            microservices, development of GraphQL apis and automated pipelines.
-            My principal tools are: #NodeJS, #GraphQL, #GithubActions,
-            #Terraform, #Docker
+            <div className="aboutme">
+              I am a Software Developer with 9+ years of experience. I have been
+              working on projects with different sizes, using diverse languages
+              and platforms.
+              <p />
+              In the past 5 years I have been focusing mainly on JavaScript
+              coding, using mostly ES6+/next and TypeScript.
+              <p />
+              In the last 2 years, I have put more focus on backend and cloud
+              technologies, my daily tasks involves the maintenance of NodeJS
+              microservices, GraphQL apis, automated pipelines and cloud
+              development.
+            </div>
           </Section>
           <Section icon="address-card" title="contact">
             <SmallSectionContent element="phone" value="+31 0620316232" />
