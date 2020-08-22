@@ -25,9 +25,13 @@ import {
   faUserPlus,
   faTrophy,
   faLandmark,
+  faHome,
+  faMapMarker,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.scss";
 
+library.add(faHome);
+library.add(faMapMarker);
 library.add(faAddressCard);
 library.add(faAngleRight);
 library.add(faAward);

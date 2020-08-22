@@ -45,7 +45,7 @@ const Cv: React.FC<{}> = (props) => {
           <Section icon="user-plus" title="social">
             <SmallSectionContent
               element={faGithubAlt}
-              value="github.com/ateixeira"
+              value="<a href='https://github.com/ateixeira' target='_blank' rel='noopener noreferrer'>github.com/ateixeira</a>"
             />
             <SmallSectionContent
               element={faLinkedin}
@@ -60,31 +60,34 @@ const Cv: React.FC<{}> = (props) => {
         <div className="right-column">
           <Section icon="code-branch" title="experiences">
             <LargeSectionContent
-              place="LINKIT"
+              company="LINKIT"
               title="Software Developer and Consultant"
+              place="Utrecht - Netherlands"
               period={[new Date("2018-01-01")]}
               tags={["TypeScript", "NodeJS", "ReactJS", "AWS"]}
               value="LINKIT is a knowledge-driven IT-organisation specialized in delivering IT-sourcing solutions at multinationals and governmental organisations in a dynamic environment."
               icon="plus"
             />
             <LargeSectionContent
-              place="Jumbo Supermarkten"
+              company="Jumbo Supermarkten"
               title="JavaScript Developer - Backend (via LINKIT)"
+              place="Veghel - Netherlands"
               period={[new Date("2020-04-20")]}
               tags={[
                 "TypeScript",
                 "Jest",
                 "Docker",
                 "MongoDB",
-                "GraphQLFederation",
+                "GraphQL",
                 "AWS",
               ]}
               value="Part of the Jumbo <b>Foodcoach</b> backend team.<br/> I work maintaining and developing microservices on top of NestJS."
               icon="plus"
             />
             <LargeSectionContent
-              place="ABB"
+              company="ABB"
               title="JavaScript Developer - Fullstack (via LINKIT)"
+              place="Eindhoven - Netherlands"
               period={[new Date("2019-11-01"), new Date("2020-04-20")]}
               tags={[
                 "TypeScript",
@@ -99,17 +102,19 @@ const Cv: React.FC<{}> = (props) => {
               icon="plus"
             />
             <LargeSectionContent
-              place="BookSpot"
+              company="BookSpot"
               title="JavaScript Developer - Frontend (via LINKIT)"
+              place="'s-Graveland - Netherlands"
               period={[new Date("2018-04-01"), new Date("2019-10-01")]}
               tags={["React", "Webpack", "Babel", "SASS"]}
               value="Worked on the set-up and upgrade of the frontend of the transition ECI/BookSpot.<br/>The project consisted of a loosely coupled ReactJS application to an INTERSHOP backend, using a modern and up to date stack."
               icon="plus"
             />
             <LargeSectionContent
-              place="Urbanizo"
+              company="Urbanizo"
               title="Co-Founder and CTO"
-              period={[new Date("2018-04-01"), new Date("2019-10-01")]}
+              place="'Brasília, DF - Brazil"
+              period={[new Date("2012-09-01"), new Date("2019-10-01")]}
               tags={["React", "Webpack", "Babel", "SASS"]}
               value="Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015."
               icon="plus"
@@ -117,14 +122,14 @@ const Cv: React.FC<{}> = (props) => {
           </Section>
           <Section icon="hammer" title="skills">
             <div className="skills-section-wrapper">
-              <SkillsSectionContent skill="TypeScript" score={4} />
+              <SkillsSectionContent skill="TypeScript" score={5} />
               <SkillsSectionContent skill="NodeJS" score={5} />
-              <SkillsSectionContent skill="ReactJS" score={2} />
+              <SkillsSectionContent skill="ReactJS" score={5} />
               <SkillsSectionContent skill="MongoDB" score={5} />
               <SkillsSectionContent skill="GraphQL" score={5} />
               <SkillsSectionContent skill="ElasticSearch" score={5} />
               <SkillsSectionContent skill="Apache" score={5} />
-              <SkillsSectionContent skill="Python" score={4} />
+              <SkillsSectionContent skill="Python" score={5} />
             </div>
           </Section>
           <Section icon="landmark" title="education and awards">
@@ -137,7 +142,7 @@ const Cv: React.FC<{}> = (props) => {
               />
               <EducationSectionContent
                 icon="trophy"
-                title="1st place at <i><b><a href='htpps://www.google.com' target='_blank' rel='noopener noreferrer' style='color: inherit;text-decoration:none'>Sua Idéia Vale 1 Milhão</a></b></i>"
+                title="1st company at <i><b><a href='https://thenextweb.com/la/2011/08/01/your-idea-is-worth-1-million-and-the-winners-are/' target='_blank' rel='noopener noreferrer'>Sua Idéia Vale 1 Milhão</a></b></i>"
                 description="The winning idea gave birth to <b>Urbanizo</b> "
                 date="2012"
               />
@@ -153,9 +158,6 @@ const Cv: React.FC<{}> = (props) => {
               />
             </div>
           </Section>
-          {/* <Section icon="icons" title="interests">
-            interests content
-          </Section> */}
         </div>
       </div>
     </div>

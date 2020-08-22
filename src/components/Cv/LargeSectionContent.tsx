@@ -1,8 +1,11 @@
 import * as React from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import "./Sections.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faMapMarker } from "@fortawesome/free-solid-svg-icons";
 
 interface IProps {
+  company: string;
   place: string;
   title: string;
   period: [Date, Date?];
@@ -37,12 +40,17 @@ const LargeSectionContent: React.FC<IProps> = (props) => {
       </div>
       <div className="large-section-item-content">
         <div className="large-section-item-wrapper">
-          <div className="large-section-item-company">{props.place}</div>
+          <div className="large-section-item-company">{props.title}</div>
           <div className="large-section-item-period">
             {`${formattedDate(period[0])} - ${dateOrNow(period[1])}`}
           </div>
         </div>
-        <div className="large-section-item-title">{props.title}</div>
+        <div className="large-section-item-details">
+          <FontAwesomeIcon icon={faHome} />
+          &nbsp;{props.company}&nbsp;
+          <FontAwesomeIcon icon={faMapMarker} />
+          &nbsp;{props.place}&nbsp;
+        </div>
         <div
           className="large-section-item-value"
           dangerouslySetInnerHTML={{ __html: props.value }}

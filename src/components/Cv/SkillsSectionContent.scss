@@ -7,16 +7,24 @@
     align-items: baseline;
     width: 50%;
     padding: 0.4rem 0;
-    .skills-section-bar {
+    .skills-section-dots {
       display: flex;
+      justify-content: flex-end;
       width: 100%;
       height: 0.6rem;
-      background-color: #dedede;
       margin: 0 0.8rem;
-      border: 1px solid #a5a5a5;
-      .skills-section-bar-slot {
-        background-color: #7d84a9;
-        width: 20%;
+      .skills-section-dot {
+        height: 0.5rem;
+        width: 0.5rem;
+        border: 1.3px solid #a5a5a5;
+        border-radius: 50%;
+        margin-right: 0.3rem;
+
+        @for $i from 1 through 5 {
+          &.active:nth-child(#{$i}) {
+            box-shadow: inset 0 0 0 1000px darken(#b3b6c3, ($i - 1) * 5%);
+          }
+        }
       }
     }
   }
@@ -24,8 +32,6 @@
   .skills-section-item-content {
     display: flex;
     min-width: 6rem;
-    .skills-section-bar {
-      background-color: #cecece;
-    }
+    padding-left: 2rem;
   }
 }

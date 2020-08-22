@@ -1,3 +1,8 @@
+a {
+  color: inherit;
+  text-decoration-style: dotted;
+}
+
 .paper-sheet {
   display: flex;
   flex-direction: column;
@@ -18,7 +23,7 @@
     .left-column {
       display: flex;
       flex-direction: column;
-      width: 26%;
+      width: 30%;
       border-right: 1px solid gray;
       padding-right: 1.5rem;
 
@@ -45,6 +50,9 @@
     padding: 0;
     overflow: hidden;
   }
+  html {
+    font-size: 12px;
+  }
   .paper-sheet {
     margin: 0px;
     border: 0px;
@@ -54,10 +62,8 @@
     min-width: 21cm;
     max-height: 28.7cm;
     height: 28.7cm;
-    .skills-section-bar {
-      display: block !important;
-      .skills-section-bar-slot {
-      }
+    .content {
+      padding: 1rem;
     }
   }
 }

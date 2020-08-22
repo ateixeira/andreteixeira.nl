@@ -7,14 +7,14 @@ interface IProps {
 }
 
 const renderScoreBar = (score: number): React.ReactNode => {
+  const drawDot = (_: number, index: number) => (
+    <div
+      key={index}
+      className={`skills-section-dot ${score >= index + 1 ? "active" : ""}`}
+    />
+  );
   return (
-    <div className="skills-section-bar">
-      {Array(score)
-        .fill(" ")
-        .map((_, index) => (
-          <div key={index} className="skills-section-bar-slot" />
-        ))}
-    </div>
+    <div className="skills-section-dots">{Array(5).fill(" ").map(drawDot)}</div>
   );
 };
 

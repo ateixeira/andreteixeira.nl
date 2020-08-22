@@ -13,7 +13,10 @@ const SmallSectionContent: React.FC<IProps> = (props) => {
       <div className="small-section-item-icon">
         <FontAwesomeIcon icon={props.element} />
       </div>
-      <div className="small-section-item-content">{props.value}</div>
+      <div
+        className="small-section-item-content"
+        dangerouslySetInnerHTML={{ __html: props.value }}
+      />
     </div>
   );
 };
