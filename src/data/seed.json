@@ -84,7 +84,7 @@
       "contact": "Wietse de Vries - Frontend Lead",
       "phone": "+31 617 771 339",
       "period": ["2018-04-01", "2019-10-01"],
-      "tags": ["React", "Webpack", "Babel", "SASS"],
+      "tags": ["React", "Webpack", "Babel", "SASS", "Docker"],
       "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.",
       "icon": "plus"
     },
