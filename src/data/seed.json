@@ -1,5 +1,5 @@
 {
-  "aboutme": "I am a Software Developer with 9+ years of experience. I have been working on projects with different sizes, using diverse languages and platforms.<p />In the past 5 years I have been focusing mainly on JavaScriptcoding, using mostly ES6+/next and TypeScript.<p />In the last 2 years, I have put more focus on backend and cloudtechnologies, my daily tasks involves the maintenance of NodeJSmicroservices, GraphQL apis, automated pipelines and clouddevelopment.",
+  "aboutme": "I am a Software Developer with 9+ years of experience. I have been working on projects with different sizes, using diverse languages and platforms.<p />In the past 5 years I have been focusing mainly on JavaScript coding, using mostly ES6+/next and TypeScript.<p />In the last 2 years, I have put more focus on backend and cloud technologies. My daily tasks involves the maintenance of NodeJS microservices, GraphQL apis, automated pipelines and cloud development.",
   "contact": [
     { "icon": "phone", "iconType": "fas", "value": "+31 620 316 232" },
     {
