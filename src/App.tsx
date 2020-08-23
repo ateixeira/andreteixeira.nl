@@ -1,10 +1,5 @@
 import * as React from "react";
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile,
-} from "react-device-detect";
+import { isMobile } from "react-device-detect";
 import { Cv } from "./components/Cv";
 // import { Game } from "./components/Game";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
