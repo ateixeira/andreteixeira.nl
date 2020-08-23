@@ -1,10 +1,6 @@
 import * as React from "react";
+import { SkillItem } from "./types";
 import "./Sections.scss";
-
-interface IProps {
-  skill: string;
-  score: number;
-}
 
 const renderScoreBar = (score: number): React.ReactNode => {
   const drawDot = (_: number, index: number) => (
@@ -18,7 +14,7 @@ const renderScoreBar = (score: number): React.ReactNode => {
   );
 };
 
-const Skill: React.FC<IProps> = (props) => {
+const Skill: React.FC<SkillItem> = (props) => {
   return (
     <div className="skills-section-item">
       <div className="skills-section-item-content">{props.skill}</div>

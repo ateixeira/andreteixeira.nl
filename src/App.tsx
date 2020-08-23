@@ -1,4 +1,10 @@
 import * as React from "react";
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from "react-device-detect";
 import { Cv } from "./components/Cv";
 // import { Game } from "./components/Game";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -57,7 +63,8 @@ library.add(faUserPlus);
 const App: React.FC<{}> = () => {
   return (
     <div className="App">
-      <Cv />
+      {isMobile && <div>Mobile</div>}
+      {!isMobile && <Cv />}
       {/* <Game /> */}
     </div>
   );

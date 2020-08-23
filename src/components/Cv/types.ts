@@ -18,6 +18,7 @@ export interface ExperienceItem {
 
 export interface SkillItem {
   skill: string;
+  comment: string;
   score: number;
 }
 

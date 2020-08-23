@@ -62,7 +62,12 @@ const Cv: React.FC<{}> = (props) => {
           <Section icon="hammer" title="skills">
             <div className="skills-section-wrapper">
               {data.skills?.map((item) => (
-                <Skill key={item.skill} skill={item.skill} score={item.score} />
+                <Skill
+                  key={item.skill}
+                  skill={item.skill}
+                  comment={item.comment}
+                  score={item.score}
+                />
               ))}
             </div>
           </Section>
