@@ -9,7 +9,7 @@ import { useFetchFromSeed } from "./hooks";
 import "./style.scss";
 
 const Cv: React.FC<{}> = (props) => {
-  const { data, loading } = useFetchFromSeed();
+  const { data } = useFetchFromSeed();
   return (
     <div className="paper-sheet">
       <Header />
