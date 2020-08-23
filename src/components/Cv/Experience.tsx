@@ -1,27 +1,15 @@
 import * as React from "react";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import "./Sections.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ExperienceItem } from "./types";
 import {
   faHome,
   faMapMarker,
   faUser,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import "./Sections.scss";
 
-interface IProps {
-  company: string;
-  place: string;
-  title: string;
-  contact?: string;
-  phone?: string;
-  period: [Date, Date?];
-  tags: string[];
-  value: string;
-  icon: IconProp;
-}
-
-const Experience: React.FC<IProps> = (props) => {
+const Experience: React.FC<ExperienceItem> = (props) => {
   const monthNames = [
     "Jan",
     "Feb",
@@ -37,19 +25,21 @@ const Experience: React.FC<IProps> = (props) => {
     "Dec",
   ];
   const { period } = props;
+  const datePeriod = [new Date(period[0])];
+  if (period[1]) {
+    datePeriod.push(new Date(period[1]));
+  }
   const formattedDate = (date: Date) =>
     `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
   const dateOrNow = (date: Date) => (date ? formattedDate(date) : "Now");
   return (
     <div className="large-section-item">
-      <div className="large-section-item-icon">
-        {/* <FontAwesomeIcon icon={props.icon} /> */}+
-      </div>
+      <div className="large-section-item-icon">+</div>
       <div className="large-section-item-content">
         <div className="large-section-item-wrapper">
           <div className="large-section-item-company">{props.title}</div>
           <div className="large-section-item-period">
-            {`${formattedDate(period[0])} - ${dateOrNow(period[1])}`}
+            {`${formattedDate(datePeriod[0])} - ${dateOrNow(datePeriod[1])}`}
           </div>
         </div>
         <div className="large-section-item-details">

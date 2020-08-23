@@ -26,6 +26,7 @@ import {
   faLandmark,
   faHome,
   faMapMarker,
+  faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.scss";
 
@@ -51,6 +52,7 @@ library.add(faPhone);
 library.add(faPlus);
 library.add(faTrophy);
 library.add(faUser);
+library.add(faUserPlus);
 
 const App: React.FC<{}> = () => {
   return (

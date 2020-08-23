@@ -1,0 +1,137 @@
+{
+  "aboutme": "I am a Software Developer with 9+ years of experience. I have been working on projects with different sizes, using diverse languages and platforms.<p />In the past 5 years I have been focusing mainly on JavaScriptcoding, using mostly ES6+/next and TypeScript.<p />In the last 2 years, I have put more focus on backend and cloudtechnologies, my daily tasks involves the maintenance of NodeJSmicroservices, GraphQL apis, automated pipelines and clouddevelopment.",
+  "contact": [
+    { "icon": "phone", "iconType": "fas", "value": "+31 620 316 232" },
+    {
+      "icon": "envelope",
+      "iconType": "fas",
+      "value": "andre.teixeira@gmail.com"
+    },
+    { "icon": "map-marker-alt", "iconType": "fas", "value": "Utrecht, NL" }
+  ],
+  "education": [
+    {
+      "icon": "graduation-cap",
+      "title": "Bachelor of Computer Science",
+      "description": "at UniCEUB, Brasília, DF, Brazil",
+      "date": "2002 - 2007"
+    },
+    {
+      "icon": "trophy",
+      "title": "1st place at <i><b><a href='https://thenextweb.com/la/2011/08/01/your-idea-is-worth-1-million-and-the-winners-are/' target='_blank' rel='noopener noreferrer'>Sua Idéia Vale 1 Milhão</a></b></i>",
+      "description": "The winning idea gave birth to <b>Urbanizo</b>",
+      "date": "2012"
+    },
+    {
+      "icon": "aws",
+      "iconType": "fab",
+      "title": "<a href='https://www.youracclaim.com/badges/200fdc51-b141-4cdd-b23e-2f7529612e6a/public_url' target='_blank' rel='noopener noreferrer'>AWS Certified Solutions Architect</a>",
+      "date": "2018"
+    },
+    {
+      "icon": "aws",
+      "iconType": "fab",
+      "title": "<a href='https://www.youracclaim.com/badges/be3e9d8e-195f-42f6-940f-10fc47d3f233/public_url' target='_blank' rel='noopener noreferrer'>AWS Certified Developer</a>",
+      "date": "2020"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Developer and Consultant",
+      "company": "LINKIT",
+      "place": "Utrecht - NL",
+      "contact": "Thiago de Faria - CTO",
+      "phone": "+31 642 191 408",
+      "period": ["2018-01-01"],
+      "tags": ["TypeScript", "NodeJS", "ReactJS", "AWS"],
+      "value": "LINKIT is a knowledge-driven IT-organisation specialized in delivering IT-sourcing solutions at multinationals and governmental organisations in a dynamic environment.",
+      "icon": "plus"
+    },
+    {
+      "title": "JavaScript Developer - Backend (via LINKIT)",
+      "company": "Jumbo Supermarkten",
+      "place": "Veghel - NL",
+      "contact": "Sabina Baciu - Team Lead",
+      "phone": "+31 634 346 616",
+      "period": ["2020-04-20"],
+      "tags": ["TypeScript", "Jest", "Docker", "MongoDB", "GraphQL", "AWS"],
+      "value": "Part of the Jumbo <b>Foodcoach</b> backend team.<br/> I work maintaining and developing microservices on top of NestJS.",
+      "icon": "plus"
+    },
+    {
+      "title": "JavaScript Developer - Fullstack (via LINKIT)",
+      "company": "ABB",
+      "place": "Eindhoven - NL",
+      "contact": "Bram Wijnen - Tech. Lead",
+      "phone": "+31 625 189 431",
+      "period": ["2019-11-01", "2020-04-20"],
+      "tags": [
+        "TypeScript",
+        "NodeJS",
+        "Karma",
+        "Mocha",
+        "Chai",
+        "React",
+        "Azure"
+      ],
+      "value": "ABB Spirit IT provides the global oil and gas industry with advanced flow computers and measurement and automation solutions.<br/>I work as a software engineer on the eXLent product, an online measurement platform.",
+      "icon": "plus"
+    },
+    {
+      "title": "JavaScript Developer - Frontend (via LINKIT)",
+      "company": "BookSpot",
+      "place": "'s-Graveland - NL",
+      "contact": "Wietse de Vries - Frontend Lead",
+      "phone": "+31 617 771 339",
+      "period": ["2018-04-01", "2019-10-01"],
+      "tags": ["React", "Webpack", "Babel", "SASS"],
+      "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.",
+      "icon": "plus"
+    },
+    {
+      "title": "Co-Founder and CTO",
+      "company": "Urbanizo",
+      "place": "Brasília - Brazil",
+      "contact": "Marcos Roberto - Co-Founder",
+      "phone": "+55 (61) 9 8158 5100",
+      "period": ["2012-09-01", "2016-10-01"],
+      "tags": [
+        "Python",
+        "Django",
+        "Scrapy",
+        "JavaScript",
+        "UnderscoreJS",
+        "jQuery"
+      ],
+      "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.",
+      "icon": "plus"
+    }
+  ],
+  "social": [
+    {
+      "icon": "github-alt",
+      "iconType": "fab",
+      "value": "<a href='https://github.com/ateixeira' target='_blank' rel='noopener noreferrer'>github.com/ateixeira</a>"
+    },
+    {
+      "icon": "linkedin",
+      "iconType": "fab",
+      "value": "<a href='https://linkedin.com/in/andret/' target='_blank' rel='noopener noreferrer'>linkedin.com/in/andret/</a>"
+    },
+    {
+      "icon": "stack-overflow",
+      "iconType": "fab",
+      "value": "<a href='https://stackoverflow.com/users/955183/' target='_blank' rel='noopener noreferrer'>users/955183</a>"
+    }
+  ],
+  "skills": [
+    { "skill": "TypeScript", "score": 5 },
+    { "skill": "NodeJS", "score": 5 },
+    { "skill": "ReactJS", "score": 5 },
+    { "skill": "MongoDB", "score": 5 },
+    { "skill": "GraphQL", "score": 5 },
+    { "skill": "ElasticSearch", "score": 5 },
+    { "skill": "Apache", "score": 5 },
+    { "skill": "Python", "score": 5 }
+  ]
+}
