@@ -74,7 +74,7 @@
         "React",
         "Azure"
       ],
-      "value": "ABB Spirit IT provides the global oil and gas industry with advanced flow computers and measurement and automation solutions.<br/>I work as a software engineer on the eXLent product, an online measurement platform.",
+      "value": "ABB Spirit IT provides the global oil and gas industry with advanced flow computers and measurement and automation solutions.<br/>I worked as a software engineer on the eXLent product, an online measurement platform.",
       "icon": "plus"
     },
     {
@@ -85,7 +85,7 @@
       "phone": "+31 617 771 339",
       "period": ["2018-04-01", "2019-10-01"],
       "tags": ["React", "Webpack", "Babel", "SASS", "Docker"],
-      "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.",
+      "value": "Worked on the set-up and upgrade of the frontend during the transition ECI/BookSpot.<br/>The project consists of a loosely coupled ReactJS application to an Intershop backend, using a modern and up to date stack: React 16, Webpack 4, Babel 7, Sass.",
       "icon": "plus"
     },
     {
@@ -94,7 +94,7 @@
       "place": "Brasília - Brazil",
       "contact": "Marcos Roberto - Co-Founder",
       "phone": "+55 (61) 9 8158 5100",
-      "period": ["2011-09-01", "2016-10-01"],
+      "period": ["2011-09-01", "2016-02-01"],
       "tags": [
         "Python",
         "Django",
@@ -103,7 +103,7 @@
         "UnderscoreJS",
         "jQuery"
       ],
-      "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.",
+      "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.<br/>I led the technical team while taking part of product and software development.",
       "icon": "plus"
     }
   ],
@@ -125,13 +125,43 @@
     }
   ],
   "skills": [
-    { "skill": "TypeScript", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "NodeJS", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "ReactJS", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "MongoDB", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "GraphQL", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "ElasticSearch", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "Apache", "comment": "Abcde fghijkl", "score": 5 },
-    { "skill": "Python", "comment": "Abcde fghijkl", "score": 5 }
+    {
+      "skill": "JavaScript",
+      "comment": "My first language, in 1999",
+      "score": 5
+    },
+    {
+      "skill": "TypeScript",
+      "comment": "Once there, you can't go back",
+      "score": 4
+    },
+    {
+      "skill": "Backend",
+      "comment": "NodeJS, NestJS, Django, Flask",
+      "score": 5
+    },
+    { "skill": "Frontend", "comment": "ReactJS, RiotJS, SASS", "score": 5 },
+    { "skill": "NoSQL", "comment": "MongoDB, DynamoDB", "score": 4 },
+    {
+      "skill": "GraphQL",
+      "comment": "Take only what you need. ❤️",
+      "score": 4
+    },
+    { "skill": "Mobile", "comment": "React Native, PWA", "score": 3 },
+    {
+      "skill": "Serverless",
+      "comment": "API Gateway, λ, Dynamo, S3, SQS, SNS",
+      "score": 5
+    },
+    {
+      "skill": "English",
+      "comment": "Full Professional Proeficiency",
+      "score": 5
+    },
+    {
+      "skill": "Innovation",
+      "comment": "Lean, Canvas, Design Thinking",
+      "score": 3
+    }
   ]
 }

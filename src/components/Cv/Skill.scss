@@ -4,34 +4,47 @@
   margin-left: 14px;
   .skills-section-item {
     display: flex;
+    flex-direction: column;
     align-items: baseline;
-    width: 50%;
-    padding: 0.4rem 0;
-    .skills-section-dots {
+    width: 44%;
+    padding-left: 2rem;
+    .skills-section-item-wrapper {
       display: flex;
-      justify-content: flex-end;
       width: 100%;
-      height: 0.6rem;
-      margin: 0 0.8rem;
-      .skills-section-dot {
-        height: 0.5rem;
-        width: 0.5rem;
-        border: 1.3px solid #a5a5a5;
-        border-radius: 50%;
-        margin-right: 0.3rem;
+      .skills-section-item-content {
+        display: flex;
+        min-width: 6rem;
+      }
+      .skills-section-dots {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 0.6rem;
+        margin: 0 0.8rem;
+        .skills-section-dot {
+          height: 0.7rem;
+          width: 0.7rem;
+          border: 0.12rem solid #a5a5a5;
+          border-radius: 50%;
+          margin-right: 0.3rem;
 
-        @for $i from 1 through 5 {
-          &.active:nth-child(#{$i}) {
-            box-shadow: inset 0 0 0 1000px darken(#b3b6c3, ($i - 1) * 5%);
+          @for $i from 1 through 5 {
+            &.active:nth-child(#{$i}) {
+              box-shadow: inset 0 0 0 1000px darken(#b3b6c3, ($i - 1) * 5%);
+              height: 0.92rem;
+              width: 0.92rem;
+              border: 0;
+            }
           }
         }
       }
     }
-  }
-
-  .skills-section-item-content {
-    display: flex;
-    min-width: 6rem;
-    padding-left: 2rem;
+    .skills-section-item-comment {
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #655a5a;
+      padding: 0.2rem;
+    }
   }
 }

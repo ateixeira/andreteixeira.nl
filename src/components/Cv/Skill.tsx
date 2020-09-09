@@ -17,8 +17,11 @@ const renderScoreBar = (score: number): React.ReactNode => {
 const Skill: React.FC<SkillItem> = (props) => {
   return (
     <div className="skills-section-item">
-      <div className="skills-section-item-content">{props.skill}</div>
-      {renderScoreBar(props.score)}
+      <div className="skills-section-item-wrapper">
+        <div className="skills-section-item-content">{props.skill}</div>
+        {renderScoreBar(props.score)}
+      </div>
+      <div className="skills-section-item-comment">{props.comment}</div>
     </div>
   );
 };
