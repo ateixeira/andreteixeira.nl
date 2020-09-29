@@ -39,6 +39,10 @@
       font-size: 0.8rem;
       color: #655a5a;
       padding: 0.2rem;
+
+      .large-section-item-details-group {
+        display: flex;
+      }
     }
 
     .large-section-item-tags {
@@ -46,5 +50,38 @@
       font-weight: 400;
       color: #54557f;
     }
+  }
+}
+
+@media only screen and (max-width: $small-breakpoint) {
+  .large-section-item-icon {
+    display: none;
+  }
+  .large-section-item-content {
+    margin-bottom: 15px;
+    .large-section-item-wrapper {
+      flex-direction: column;
+      .large-section-item-company {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.16rem;
+        align-items: center;
+        & span {
+          font-style: italic;
+          font-size: small;
+        }
+      }
+      .large-section-item-period {
+        padding: 0.1rem 0 0.1rem 0.3rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .large-section-item-value,
+  .large-section-item-tags {
+    padding: 5px !important;
+  }
+  .large-section-item-details-group {
+    flex-direction: column;
   }
 }

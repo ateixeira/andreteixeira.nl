@@ -37,20 +37,35 @@ const Experience: React.FC<ExperienceItem> = (props) => {
       <div className="large-section-item-icon">+</div>
       <div className="large-section-item-content">
         <div className="large-section-item-wrapper">
-          <div className="large-section-item-company">{props.title}</div>
+          <div
+            className="large-section-item-company"
+            dangerouslySetInnerHTML={{ __html: props.title }}
+          />
           <div className="large-section-item-period">
             {`${formattedDate(datePeriod[0])} - ${dateOrNow(datePeriod[1])}`}
           </div>
         </div>
         <div className="large-section-item-details">
-          {props.company && <FontAwesomeIcon icon={faHome} />}
-          &nbsp;{props.company}&nbsp;&nbsp;
-          {props.place && <FontAwesomeIcon icon={faMapMarker} />}
-          &nbsp;{props.place}&nbsp;&nbsp;
-          {props.contact && <FontAwesomeIcon icon={faUser} />}
-          &nbsp;{props.contact}&nbsp;&nbsp;
-          {props.phone && <FontAwesomeIcon icon={faPhone} />}
-          &nbsp;{props.phone}&nbsp;&nbsp;
+          <div className="large-section-item-details-group">
+            <span>
+              {props.company && <FontAwesomeIcon icon={faHome} />}
+              &nbsp;{props.company}&nbsp;&nbsp;
+            </span>
+            <span>
+              {props.place && <FontAwesomeIcon icon={faMapMarker} />}
+              &nbsp;{props.place}&nbsp;&nbsp;
+            </span>
+          </div>
+          <div className="large-section-item-details-group">
+            <span>
+              {props.contact && <FontAwesomeIcon icon={faUser} />}
+              &nbsp;{props.contact}&nbsp;&nbsp;
+            </span>
+            <span>
+              {props.phone && <FontAwesomeIcon icon={faPhone} />}
+              &nbsp;{props.phone}&nbsp;&nbsp;
+            </span>
+          </div>
         </div>
         <div
           className="large-section-item-value"

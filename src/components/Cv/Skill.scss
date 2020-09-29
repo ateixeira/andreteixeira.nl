@@ -48,3 +48,10 @@
     }
   }
 }
+
+@media only screen and (max-width: $medium-breakpoint) {
+  .skills-section-item {
+    width: 100% !important;
+    padding: 0.5rem;
+  }
+}

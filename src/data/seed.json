@@ -48,7 +48,7 @@
       "icon": "plus"
     },
     {
-      "title": "JavaScript Developer - Backend (via LINKIT)",
+      "title": "JavaScript Developer - Backend <span>(via LINKIT)</span>",
       "company": "Jumbo Supermarkten",
       "place": "Veghel - NL",
       "contact": "Sabina Baciu - Team Lead",
@@ -59,7 +59,7 @@
       "icon": "plus"
     },
     {
-      "title": "JavaScript Developer - Fullstack (via LINKIT)",
+      "title": "JavaScript Developer - Fullstack <span>(via LINKIT)</span>",
       "company": "ABB",
       "place": "Eindhoven - NL",
       "contact": "Bram Wijnen - Tech. Lead",
@@ -78,10 +78,10 @@
       "icon": "plus"
     },
     {
-      "title": "JavaScript Developer - Frontend (via LINKIT)",
+      "title": "JavaScript Developer - Frontend <span>(via LINKIT)</span>",
       "company": "BookSpot",
       "place": "'s-Graveland - NL",
-      "contact": "Wietse de Vries - Frontend Lead",
+      "contact": "Wietse de Vries - FE Lead",
       "phone": "+31 617 771 339",
       "period": ["2018-04-01", "2019-10-01"],
       "tags": ["React", "Webpack", "Babel", "SASS", "Docker"],

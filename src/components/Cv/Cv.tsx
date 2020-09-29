@@ -15,7 +15,7 @@ const Cv: React.FC<{}> = (props) => {
       <Header />
       <div className="content">
         <div className="left-column">
-          <Section icon="user" title="about-me">
+          <Section icon="user" title="about me">
             <div
               className="aboutme"
               dangerouslySetInnerHTML={{ __html: data.aboutme }}

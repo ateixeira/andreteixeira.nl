@@ -1,3 +1,5 @@
+@import "../../Variables";
+
 a {
   color: inherit;
   text-decoration-style: dotted;
@@ -65,5 +67,26 @@ a {
     .content {
       padding: 1rem;
     }
+  }
+}
+
+@media only screen and (max-width: $medium-breakpoint) {
+  .content {
+    flex-direction: column;
+
+    .left-column {
+      width: 100% !important;
+    }
+
+    .right-column {
+      padding-left: 0 !important;
+    }
+  }
+  .paper-sheet {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
   }
 }

@@ -1,3 +1,5 @@
+@import "../../Variables";
+
 .section {
   display: flex;
   flex-direction: column;
@@ -24,5 +26,13 @@
   @import "Experience";
   @import "Skill";
   @import "Education";
-  @import "Variables";
+}
+
+@media only screen and (max-width: $medium-breakpoint) {
+  // .paper-sheet {
+  //   border: 0px;
+  // }
+  .section {
+    margin: 0 1.5rem;
+  }
 }

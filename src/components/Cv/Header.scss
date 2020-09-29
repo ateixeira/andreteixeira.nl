@@ -1,9 +1,11 @@
+@import "../../Variables";
+
 .header {
   display: flex;
   border-bottom: 2px solid gray;
   padding: 15px;
 
-  .picture{
+  .picture {
     display: flex;
     justify-content: center;
     width: 25%;
@@ -15,19 +17,29 @@
     }
   }
 
-  .name_headline{
+  .name_headline {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 20px;
 
     .name {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 3rem;
     }
 
     .headline {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-breakpoint) {
+  .header {
+    // background-color: red;
+    margin: 2rem;
+    .picture {
+      display: none;
     }
   }
 }
