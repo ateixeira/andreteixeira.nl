@@ -27,6 +27,7 @@ import {
   faHome,
   faMapMarker,
   faUserPlus,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.scss";
 
@@ -53,6 +54,7 @@ library.add(faPlus);
 library.add(faTrophy);
 library.add(faUser);
 library.add(faUserPlus);
+library.add(faLink);
 
 const App: React.FC<{}> = () => {
   return (
