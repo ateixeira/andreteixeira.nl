@@ -1,11 +1,6 @@
 {
   "aboutme": "I am an engineer who likes to be in contact with new technologies. I like to learn new things everyday in order to help clients on their business and technical challenges. <p/> The areas that I am interested in studying and building projects are Software development, Cloud Computing, Serverless computing, NoSql Databases, Internet of Things, Services Integration, Enterprise Architecture.",
   "contact": [
-    // {
-    //   "icon": "home",
-    //   "iconType": "fas",
-    //   "value": "Ten Veldestraat, 20 3454EL"
-    // },
     { "icon": "map-marker-alt", "iconType": "fas", "value": "Utrecht, NL" },
     { "icon": "phone", "iconType": "fas", "value": "+31 620 316 232" },
     {
