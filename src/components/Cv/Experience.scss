@@ -1,7 +1,7 @@
 .large-section-item {
   display: flex;
+  padding-bottom: 0.3rem;
 
-  padding-bottom: 0.2rem;
   .large-section-item-icon {
     margin-right: 1.2rem;
     font-style: italic;
@@ -10,7 +10,7 @@
   .large-section-item-content {
     display: flex;
     flex-direction: column;
-    padding-top: 3px;
+    padding-top: 2px;
     width: 100%;
 
     .large-section-item-wrapper {
@@ -30,7 +30,7 @@
     .large-section-item-value {
       text-align: justify;
       font-size: 0.9rem;
-      padding: 3px 0;
+      padding: 2px 0;
     }
 
     .large-section-item-details {
@@ -38,10 +38,14 @@
       align-items: center;
       font-size: 0.8rem;
       color: #655a5a;
-      padding: 0.2rem;
+      padding: 0.1rem;
 
       .large-section-item-details-group {
         display: flex;
+
+        .large-section-item-details-company {
+          font-size: 0.85rem;
+        }
       }
     }
 

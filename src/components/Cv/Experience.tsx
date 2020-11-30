@@ -45,35 +45,41 @@ const Experience: React.FC<ExperienceItem> = (props) => {
             {`${formattedDate(datePeriod[0])} - ${dateOrNow(datePeriod[1])}`}
           </div>
         </div>
-        <div className="large-section-item-details">
-          <div className="large-section-item-details-group">
-            <span>
-              {props.company && <FontAwesomeIcon icon={faHome} />}
-              &nbsp;{props.company}&nbsp;&nbsp;
-            </span>
-            <span>
-              {props.place && <FontAwesomeIcon icon={faMapMarker} />}
-              &nbsp;{props.place}&nbsp;&nbsp;
-            </span>
-          </div>
-          <div className="large-section-item-details-group">
-            <span>
-              {props.contact && <FontAwesomeIcon icon={faUser} />}
-              &nbsp;{props.contact}&nbsp;&nbsp;
-            </span>
-            <span>
-              {props.phone && <FontAwesomeIcon icon={faPhone} />}
-              &nbsp;{props.phone}&nbsp;&nbsp;
-            </span>
-          </div>
-        </div>
+        <>
+          {(props.company || props.place || props.contact || props.phone) && (
+            <div className="large-section-item-details">
+              <div className="large-section-item-details-group">
+                <span className="large-section-item-details-company">
+                  {props.company && <FontAwesomeIcon icon={faHome} />}
+                  &nbsp;<b>{props.company}</b>&nbsp;&nbsp;
+                </span>
+                <span>
+                  {props.place && <FontAwesomeIcon icon={faMapMarker} />}
+                  &nbsp;{props.place}&nbsp;&nbsp;
+                </span>
+              </div>
+              <div className="large-section-item-details-group">
+                <span>
+                  {props.contact && <FontAwesomeIcon icon={faUser} />}
+                  &nbsp;{props.contact}&nbsp;&nbsp;
+                </span>
+                <span>
+                  {props.phone && <FontAwesomeIcon icon={faPhone} />}
+                  &nbsp;{props.phone}&nbsp;&nbsp;
+                </span>
+              </div>
+            </div>
+          )}
+        </>
         <div
           className="large-section-item-value"
           dangerouslySetInnerHTML={{ __html: props.value }}
         ></div>
-        <div className="large-section-item-tags">
-          {`#${props.tags.join(" #")}`}
-        </div>
+        {!!props.tags.length && (
+          <div className="large-section-item-tags">
+            {`#${props.tags.join(" #")}`}
+          </div>
+        )}
       </div>
     </div>
   );

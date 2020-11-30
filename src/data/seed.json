@@ -1,6 +1,12 @@
 {
-  "aboutme": "I am an engineer who likes to be in contact with new technologies. I like to learn new things everyday in order to help clients on their business and technical challenges. <p/> The areas that I am interested in studying and building projects are Software development, Cloud Computing, Serverless computing, NoSql Databases, Internet of Things, Services Integration, Enterprise Architecture.",
+  "aboutme": "I am a curious engineer always learning new technologies. This is the reason I have worked in Operations, Backend, Frontend, led teams and fulfilled different roles. But my founder background taught me to balance the added business value with a promising new tech, always. <p/> For the past 5 years I've been working with customer-facing web applications hosted on AWS. The velocity gained in building serverless applications in the cloud allied with my drive to dive deeper is my superpower to continue to amaze customers.",
+
   "contact": [
+    {
+      "icon": "home",
+      "iconType": "fas",
+      "value": "Ten Veldestraat, 20 3454EL"
+    },
     { "icon": "map-marker-alt", "iconType": "fas", "value": "Utrecht, NL" },
     { "icon": "phone", "iconType": "fas", "value": "+31 620 316 232" },
     {
@@ -25,14 +31,8 @@
     {
       "icon": "aws",
       "iconType": "fab",
-      "title": "<a href='https://www.youracclaim.com/badges/200fdc51-b141-4cdd-b23e-2f7529612e6a/public_url' target='_blank' rel='noopener noreferrer'>AWS Certified Solutions Architect</a>",
-      "date": "2018"
-    },
-    {
-      "icon": "aws",
-      "iconType": "fab",
-      "title": "<a href='https://www.youracclaim.com/badges/be3e9d8e-195f-42f6-940f-10fc47d3f233/public_url' target='_blank' rel='noopener noreferrer'>AWS Certified Developer</a>",
-      "date": "2020"
+      "title": "<a href='https://www.youracclaim.com/badges/200fdc51-b141-4cdd-b23e-2f7529612e6a/public_url' target='_blank' rel='noopener noreferrer'>AWS Certified Solutions Architect</a> (Exp: 12/2021)<br/><a href='https://www.youracclaim.com/badges/be3e9d8e-195f-42f6-940f-10fc47d3f233/public_url' target='_blank' rel='noopener noreferrer'>AWS Certified Developer</a> (Exp: 08/2023)",
+      "date": "2018 - 2020"
     }
   ],
   "experience": [
@@ -48,7 +48,7 @@
       "icon": "plus"
     },
     {
-      "title": "JavaScript Developer - Backend <span>(via LINKIT)</span>",
+      "title": "Cloud Native Engineer <span>(via LINKIT)</span>",
       "company": "Jumbo Supermarkten",
       "place": "Veghel - NL",
       "contact": "Sabina Baciu - Team Lead",
@@ -69,6 +69,25 @@
       "icon": "plus"
     },
     {
+      "title": "JavaScript Developer - Fullstack <span>(via LINKIT)</span>",
+      "company": "ABB",
+      "place": "Eindhoven - NL",
+      "contact": "Bram Wijnen - Tech. Lead",
+      "phone": "+31 625 189 431",
+      "period": ["2019-11-01", "2020-04-20"],
+      "tags": [
+        "TypeScript",
+        "NodeJS",
+        "Karma",
+        "Mocha",
+        "Chai",
+        "React",
+        "Azure"
+      ],
+      "value": "ABB Spirit IT provides the global oil and gas industry. I worked as a software engineer on the eXLent product, an online measurement platform.",
+      "icon": "plus"
+    },
+    {
       "title": "JavaScript Developer - Frontend <span>(via LINKIT)</span>",
       "company": "BookSpot",
       "place": "'s-Graveland - NL",
@@ -78,6 +97,12 @@
       "tags": ["React", "Webpack", "Babel", "SASS", "Docker"],
       "value": "Worked on the set-up and upgrade of the frontend during the transition ECI/BookSpot.<br/>The project consists of a loosely coupled ReactJS application to an Intershop backend, using a modern and up to date stack: React 16, Webpack 4, Babel 7, Sass.",
       "icon": "plus"
+    },
+    {
+      "title": "On sabbatical",
+      "value": "After selling my company and working hard for 5 years I needed some time off. Travelled around, contributed to Open Source projects and did freelance jobs.",
+      "period": ["2016-02-01", "2017-12-01"],
+      "tags": []
     },
     {
       "title": "Co-Founder and CTO",
@@ -94,11 +119,11 @@
         "UnderscoreJS",
         "jQuery"
       ],
-      "value": "Urbanizo was a startup focused on bringing data intelligence to real estate market. It was invested by Buscapé in 2011 and acquired by Navent/ImovelWeb in 2015.<br/>I led the technical team while taking part of product and software development. Took part on negotiations to raise <b>$500K</b> funding.",
+      "value": "One of the two founders of Urbanizo, a data intelligence startup for the real state market. Took active part on the creative architecture and led the technical teams, hired the core engineers and designed the product. As a founder I was co-responsible for fund-raising, the negotiations with Buscapé (first investor in 2011) and being acquired by Navent/ImovelWeb in 2015",
       "icon": "plus"
     },
     {
-      "title": "Sr. Web Servers administrator",
+      "title": "Sr. Systems Administrator",
       "company": "Algar Tech",
       "place": "Brasília - Brazil",
       "period": ["2011-01-01", "2011-10-01"],
@@ -107,7 +132,7 @@
       "icon": "plus"
     },
     {
-      "title": "Intern",
+      "title": "Trainee",
       "company": "Oracle Corporation",
       "place": "Brasília - Brazil",
       "period": ["2004-04-20", "2007-07-01"],
@@ -146,36 +171,36 @@
   ],
   "skills": [
     {
-      "skill": "JavaScript",
-      "comment": "My first language, in 1999",
+      "skill": "Serverless",
+      "comment": "API Gateway, λ, DynamoDB, S3, SQS, SNS",
       "score": 5
     },
     {
-      "skill": "TypeScript",
-      "comment": "Once there, you can't go back",
-      "score": 4
+      "skill": "Cloud",
+      "comment": "Lots of AWS, some Azure and GCP Firebase",
+      "score": 5
     },
     {
       "skill": "Backend",
       "comment": "NodeJS, NestJS, Python, Django, Flask",
       "score": 5
     },
+    {
+      "skill": "JavaScript",
+      "comment": "My first language, in 1999",
+      "score": 5
+    },
     { "skill": "Frontend", "comment": "ReactJS, RiotJS, SASS", "score": 5 },
+    {
+      "skill": "TypeScript",
+      "comment": "Once there, you can't go back",
+      "score": 4
+    },
     { "skill": "NoSQL", "comment": "MongoDB, DynamoDB", "score": 4 },
     {
       "skill": "DevOps",
       "comment": "CI/CD, Cloud Formation, Terraform, EKS",
       "score": 4
-    },
-    {
-      "skill": "Cloud computing",
-      "comment": "EC2, RDS, Elastic Beanstalk",
-      "score": 4
-    },
-    {
-      "skill": "Serverless",
-      "comment": "API Gateway, λ, Dynamo, S3, SQS, SNS",
-      "score": 5
     }
   ]
 }
