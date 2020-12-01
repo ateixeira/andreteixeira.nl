@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Cv } from "./components/Cv";
-// import { Game } from "./components/Game";
 import { library, IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   faLinkedin,
@@ -60,7 +59,6 @@ const App: React.FC<{}> = () => {
   return (
     <div className="App">
       <Cv />
-      {/* <Game /> */}
     </div>
   );
 };
