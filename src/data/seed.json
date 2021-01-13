@@ -2,11 +2,6 @@
   "aboutme": "I am a curious engineer always learning new technologies. This is the reason I have worked in Operations, Backend, Frontend, led teams and fulfilled different roles. But my founder background taught me to balance the added business value with a promising new tech, always. <p/> For the past 5 years I've been working with customer-facing web applications hosted on AWS. The velocity gained in building serverless applications in the cloud allied with my drive to dive deeper is my superpower to continue to amaze customers.",
 
   "contact": [
-    {
-      "icon": "home",
-      "iconType": "fas",
-      "value": "Ten Veldestraat, 20 3454EL"
-    },
     { "icon": "map-marker-alt", "iconType": "fas", "value": "Utrecht, NL" },
     { "icon": "phone", "iconType": "fas", "value": "+31 620 316 232" },
     {
